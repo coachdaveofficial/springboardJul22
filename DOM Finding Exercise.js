@@ -24,7 +24,7 @@ newLi.innerText = "four";
 const ul = document.querySelector('ul');
 ul.append(newLi);
 // 11
-for (let item of ol){
+for (let item of ol.children){
     item.style.backgroundColor = 'green';
 };
 // 12
