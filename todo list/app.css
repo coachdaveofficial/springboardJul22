@@ -1,0 +1,17 @@
+li {
+    font-size: 25px;
+    
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.delete-button {
+    margin-left: 10px;
+    
+}
+
+.check-box {
+    margin-right: 20px;
+}
