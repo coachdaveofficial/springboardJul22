@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+}
+
+.memory-game {
+    border: 2px solid orange;
+    height: 640px;
+    width: 640px;
+    margin: auto;
+    margin-left: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    perspective: 1000px;
+}
+
+.anime-card{
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    border: 2px solid white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform.5s;
+}
+
+.anime-card:active {
+    transform: scale(.97);
+    transition: transform.2s;
+}
+
+.anime-card.flip {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: orange;
+    border: 2px solid black;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+img {
+    width: 100px;
+}
+
+.game-timer {
+    font-size: 30px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: left;
+
+}
+
+.time {
+    margin-top: 100px;
+    margin-left: 100px;
+    height: 60px;
+    padding: 10px;
+    border: 3px solid white;
+    background-color: orange;
+}
+
+.millisecond {
+    color: white;
+}
+
+.buttons {
+    top: 25;
+    display: block;
+    text-align: center;
+    padding: 6px 16px;
+
+}
+
+.buttons button.active {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
