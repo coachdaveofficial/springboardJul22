@@ -3,55 +3,55 @@ const startBtn = document.querySelector('.start-game');
 const resetBtn = document.querySelector('.reset');
 let flippedCards = document.getElementsByClassName('anime-card flip');
 
-let hr = min = sec = ms = "0" + 0;
+// let hr = min = sec = ms = "0" + 0;
 
 
-startBtn.addEventListener('click', start);
-resetBtn.addEventListener('click', resetBoard);
+// startBtn.addEventListener('click', start);
+// resetBtn.addEventListener('click', resetBoard);
 
 
 
-function start() {
-    startBtn.classList.add('active');
+// function start() {
+//     startBtn.classList.add('active');
 
-    startTimer = setInterval(() => {
-        ms++
-        ms = ms < 10 ? "0" + ms : ms;
+//     startTimer = setInterval(() => {
+//         ms++
+//         ms = ms < 10 ? "0" + ms : ms;
     
-        if (ms == 100) {
-            sec++;
-            sec = sec < 10 ? "0" + sec : sec;
-            ms = "0" + 0;
-        }
+//         if (ms == 100) {
+//             sec++;
+//             sec = sec < 10 ? "0" + sec : sec;
+//             ms = "0" + 0;
+//         }
     
-        if (sec == 60) {
-            min++;
-            min = min < 10 ? "0" + min : min;
-            sec = "0" + 0;
-        }
-        if (min == 60) {
-            hr ++;
-            hr  = hr  < 10 ? "0" + hr  : hr ;
-            min = "0" + 0;
-        }
+//         if (sec == 60) {
+//             min++;
+//             min = min < 10 ? "0" + min : min;
+//             sec = "0" + 0;
+//         }
+//         if (min == 60) {
+//             hr ++;
+//             hr  = hr  < 10 ? "0" + hr  : hr ;
+//             min = "0" + 0;
+//         }
     
-        putValue();
-    }, 10);
-};
+//         putValue();
+//     }, 10);
+// };
 
-function resetTimerClass() {
-    startBtn.classList.remove('active');
-    clearInterval(start);
-    hr = min = sec = ms = "0" + 0;
+// function resetTimerClass() {
+//     startBtn.classList.remove('active');
+//     clearInterval(start);
+//     hr = min = sec = ms = "0" + 0;
     
-};
+// };
 
-function putValue() {
-    document.querySelector('.millisecond').innerHTML = ms;
-    document.querySelector('.second').innerHTML = sec;
-    document.querySelector('.minute').innerHTML = min;
-    document.querySelector('.hour').innerHTML = hr;
-}
+//  function putValue() {
+//     document.querySelector('.millisecond').innerHTML = ms;
+//     document.querySelector('.second').innerHTML = sec;
+//     document.querySelector('.minute').innerHTML = min;
+//     document.querySelector('.hour').innerHTML = hr;
+// }
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -118,9 +118,9 @@ function checkForCompletion() {
         test++
         console.log(test);
     }
-    if (test === 16) {
-        clearInterval(startTimer)
-    }
+    // if (test === 16) {
+    //     clearInterval(startTimer)
+    // }
 }
 // the extra parenthesis turns this into an Immediately Invoked Function Expression 
 // meaning the function is called as soon as it is defined
